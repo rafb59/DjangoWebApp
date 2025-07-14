@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: DjangoWebApp
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn myproject.wsgi:application"
+    autoDeploy: true
